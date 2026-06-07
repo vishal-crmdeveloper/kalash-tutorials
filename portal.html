@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to the Kalash Tutorials student portal to access your learning dashboard, track progress, and view assignments.">
+  <meta name="author" content="Kalash Tutorials">
+  <title>Student Portal | Kalash Tutorials</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Back to Home Link -->
+  <a href="index.html" class="portal-back-link" style="
+    position: fixed;
+    top: var(--space-6);
+    left: var(--space-6);
+    z-index: 100;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-family: var(--font-heading);
+    font-size: var(--fs-body-sm);
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  " onmouseover="this.style.background='rgba(255,255,255,0.15)'; this.style.color='white';"
+     onmouseout="this.style.background='rgba(255,255,255,0.08)'; this.style.color='rgba(255,255,255,0.7)';">
+    ← Back to Home
+  </a>
+
+  <div class="portal-page">
+
+    <!-- LEFT SIDE: Login Card -->
+    <div class="portal-left">
+      <div class="portal-login-card">
+
+        <!-- Header -->
+        <div class="portal-login-card__header">
+          <div class="portal-login-card__logo">
+            <span class="nav__logo-icon">KT</span>
+            <span>Kalash Tutorials</span>
+          </div>
+          <h1 class="portal-login-card__title">Welcome Back</h1>
+          <p class="portal-login-card__subtitle">Sign in to access your learning dashboard</p>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" autocomplete="off" novalidate>
+          <!-- Email / Student ID -->
+          <div class="form-group">
+            <label class="form-label" for="email">Email or Student ID</label>
+            <input
+              type="text"
+              id="email"
+              class="form-input"
+              placeholder="Enter your email or student ID"
+              autocomplete="username"
+            >
+            <p class="form-error" id="emailError">Please enter your email or student ID</p>
+          </div>
+
+          <!-- Password -->
+          <div class="form-group">
+            <label class="form-label" for="password">Password</label>
+            <div class="portal-form__password-wrapper">
+              <input
+                type="password"
+                id="password"
+                class="form-input"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+              >
+              <button
+                type="button"
+                class="portal-form__password-toggle"
+                id="passwordToggle"
+                aria-label="Toggle password visibility"
+              >👁️</button>
+            </div>
+            <p class="form-error" id="passwordError">Please enter your password</p>
+          </div>
+
+          <!-- Forgot Password -->
+          <a href="#" class="portal-form__forgot">Forgot password?</a>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn--primary btn--lg" style="width: 100%;">
+            Sign In →
+          </button>
+
+          <!-- Login Error Message -->
+          <p id="loginError" style="
+            display: none;
+            text-align: center;
+            margin-top: var(--space-4);
+            font-size: var(--fs-body-sm);
+            color: var(--clr-accent-rose);
+            padding: var(--space-3) var(--space-4);
+            background: rgba(244, 63, 94, 0.06);
+            border: 1px solid rgba(244, 63, 94, 0.15);
+            border-radius: var(--radius-lg);
+          ">Invalid credentials. Please try again.</p>
+
+          <!-- Success Message -->
+          <p id="loginSuccess" style="
+            display: none;
+            text-align: center;
+            margin-top: var(--space-4);
+            font-size: var(--fs-body-sm);
+            color: var(--clr-accent-emerald);
+            padding: var(--space-3) var(--space-4);
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            border-radius: var(--radius-lg);
+          ">✅ Login successful! Redirecting to dashboard...</p>
+        </form>
+
+        <!-- Demo Credentials -->
+        <div class="portal-demo-notice">
+          <p class="portal-demo-notice__title">🔑 Demo Credentials</p>
+          <p class="portal-demo-notice__text">Email: demo@kalash.com &nbsp;|&nbsp; Password: demo123</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE: Dashboard Preview -->
+    <div class="portal-right">
+      <div class="portal-preview">
+
+        <h2 class="portal-preview__title">Your Learning Hub</h2>
+        <p class="portal-preview__text">
+          Track your progress, manage your schedule, and stay connected with your tutors — all in one place.
+        </p>
+
+        <!-- Feature Preview Cards (2×2 grid) -->
+        <div class="portal-preview__features">
+          <!-- 1. Progress Tracking -->
+          <div class="portal-preview__feature">
+            <div class="portal-preview__feature-icon">📊</div>
+            <div class="portal-preview__feature-title">Progress Tracking</div>
+            <div class="portal-preview__feature-text">Monitor your academic growth</div>
+          </div>
+
+          <!-- 2. Class Schedule -->
+          <div class="portal-preview__feature">
+            <div class="portal-preview__feature-icon">📅</div>
+            <div class="portal-preview__feature-title">Class Schedule</div>
+            <div class="portal-preview__feature-text">View upcoming classes</div>
+          </div>
+
+          <!-- 3. Assignments -->
+          <div class="portal-preview__feature">
+            <div class="portal-preview__feature-icon">📝</div>
+            <div class="portal-preview__feature-title">Assignments</div>
+            <div class="portal-preview__feature-text">Access homework and resources</div>
+          </div>
+
+          <!-- 4. Messages -->
+          <div class="portal-preview__feature">
+            <div class="portal-preview__feature-icon">💬</div>
+            <div class="portal-preview__feature-title">Messages</div>
+            <div class="portal-preview__feature-text">Communicate with tutors</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/portal.js"></script>
+</body>
+</html>
