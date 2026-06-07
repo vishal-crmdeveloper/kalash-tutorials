@@ -234,9 +234,93 @@
 
     if (!validateStep(currentStep)) return;
 
-    // Show success modal
-    modal.classList.add('modal-overlay--active');
-    document.body.style.overflow = 'hidden';
+    // Get the submit button and set loading state
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Submitting...';
+
+    // Get access key from form or default placeholder
+    const accessKeyEl = form.querySelector('input[name="access_key"]');
+    const accessKey = accessKeyEl ? accessKeyEl.value.trim() : 'YOUR_ACCESS_KEY_HERE';
+
+    // Extract nicely formatted details for email notification
+    const selectedSubjects = Array.from(form.querySelectorAll('input[name="subjects"]:checked'))
+      .map(cb => {
+        const card = cb.closest('.subject-card');
+        const nameEl = card ? card.querySelector('.subject-card__name') : null;
+        return nameEl ? nameEl.textContent.trim() : cb.value;
+      })
+      .join(', ');
+
+    const selectedRadio = form.querySelector('input[name="schedule"]:checked');
+    let scheduleText = '';
+    if (selectedRadio) {
+      const card = selectedRadio.closest('.schedule-option');
+      const textEl = card ? card.querySelector('.schedule-option__text') : null;
+      const timeEl = card ? card.querySelector('.schedule-option__time') : null;
+      scheduleText = (textEl && timeEl) ? `${textEl.textContent.trim()} (${timeEl.textContent.trim()})` : selectedRadio.value;
+    }
+
+    const studentName = document.getElementById('studentName').value.trim();
+    const dob = document.getElementById('dob').value;
+    const gradeSelect = document.getElementById('grade');
+    const gradeText = gradeSelect ? gradeSelect.options[gradeSelect.selectedIndex].text : '';
+    const school = document.getElementById('school').value.trim();
+    
+    const parentName = document.getElementById('parentName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const notes = document.getElementById('notes').value.trim();
+
+    // Construct the payload for Web3Forms
+    const payload = {
+      access_key: accessKey,
+      subject: `New Student Enrollment: ${studentName}`,
+      from_name: "Kalash Tutorials Enrollment",
+      replyto: email,
+      
+      "Student Name": studentName,
+      "Date of Birth": dob,
+      "Grade / Class": gradeText,
+      "School Name": school,
+      "Selected Subjects": selectedSubjects,
+      "Preferred Schedule": scheduleText,
+      "Parent Name": parentName,
+      "Parent Email": email,
+      "Parent Phone": phone,
+      "Additional Notes": notes || "None"
+    };
+
+    // Send the data using Web3Forms
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    })
+    .then(async (response) => {
+      const result = await response.json();
+      if (response.ok && result.success) {
+        // Show success modal
+        modal.classList.add('modal-overlay--active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        console.error('Submission failed response:', result);
+        alert('Form submission failed: ' + (result.message || 'Please check your Web3Forms Access Key and try again.'));
+      }
+    })
+    .catch((error) => {
+      console.error('Error submitting form:', error);
+      alert('A network error occurred. Please check your internet connection and try again.');
+    })
+    .finally(() => {
+      // Restore button state
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    });
   });
 
   // =============================================
