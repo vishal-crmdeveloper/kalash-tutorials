@@ -242,7 +242,7 @@
 
     // Get access key from form or default placeholder
     const accessKeyEl = form.querySelector('input[name="access_key"]');
-    const accessKey = accessKeyEl ? accessKeyEl.value.trim() : 'YOUR_ACCESS_KEY_HERE';
+    const accessKey = accessKeyEl ? accessKeyEl.value.trim() : '894af759-cd74-4a0e-8c05-0263b28e0b7a';
 
     // Extract nicely formatted details for email notification
     const selectedSubjects = Array.from(form.querySelectorAll('input[name="subjects"]:checked'))
