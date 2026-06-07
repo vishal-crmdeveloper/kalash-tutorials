@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kalash Tutorials — Premier primary school tuition center for Math, Science, and English. Small class sizes, experienced tutors, and personalized learning for every child.">
+  <meta name="keywords" content="tuition center, primary school tuition, math tuition, science tuition, english tuition, Kalash Tutorials">
+  <title>Kalash Tutorials — Where Young Minds Shine</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+</head>
+<body>
+
+  <!-- ======== Navigation ======== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">KT</div>
+        <span class="brand-name">Kalash <span class="brand-name__accent">Tutorials</span></span>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#home" class="nav__link nav__link--active" data-section="home">Home</a></li>
+        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
+        <li><a href="#testimonials" class="nav__link" data-section="testimonials">Testimonials</a></li>
+        <li><a href="#faq" class="nav__link" data-section="faq">FAQ</a></li>
+        <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav__actions">
+        <a href="portal.html" class="btn btn--outline">Student Portal</a>
+        <a href="enroll.html" class="btn btn--primary">Enroll Now</a>
+        <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ======== Hero Section ======== -->
+  <section class="hero" id="home">
+    <div class="hero__grid"></div>
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__text">
+          <div class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Enrollments Open for 2026
+          </div>
+          <h1 class="hero__title">
+            Welcome to<br><span class="brand-name--hero">Kalash Tutorials</span>
+          </h1>
+          <p class="hero__tagline">Where Young Minds <span>Learn & Shine</span></p>
+          <p class="hero__description">
+            Empowering primary school students with expert tutoring in Math, Science, and English. 
+            Small classes, big results — every child deserves to excel.
+          </p>
+          <div class="hero__actions">
+            <a href="enroll.html" class="btn btn--primary btn--lg">
+              ✨ Enroll Your Child
+            </a>
+            <a href="#about" class="btn btn--white btn--lg">
+              📖 Learn More
+            </a>
+          </div>
+          <div class="hero__stats">
+            <div>
+              <div class="hero__stat-value">500+</div>
+              <div class="hero__stat-label">Students Taught</div>
+            </div>
+            <div>
+              <div class="hero__stat-value">95%</div>
+              <div class="hero__stat-label">Grade Improvement</div>
+            </div>
+            <div>
+              <div class="hero__stat-value">10+</div>
+              <div class="hero__stat-label">Years Experience</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__image-wrapper">
+            <img src="images/hero.png" alt="Children learning together at Kalash Tutorials" style="width:100%;height:400px;object-fit:cover;border-radius:var(--radius-2xl);">
+            <div class="hero__float-card hero__float-card--1">
+              <div class="hero__float-icon" style="background:rgba(59,130,246,0.1);">📐</div>
+              <div class="hero__float-title">Mathematics</div>
+              <div class="hero__float-subtitle">Grade 1-6 • Expert Tutors</div>
+            </div>
+            <div class="hero__float-card hero__float-card--2">
+              <div class="hero__float-icon" style="background:rgba(139,92,246,0.1);">🔬</div>
+              <div class="hero__float-title">Science</div>
+              <div class="hero__float-subtitle">Hands-on Experiments</div>
+            </div>
+            <div class="hero__float-card hero__float-card--3">
+              <div class="hero__float-icon" style="background:rgba(249,115,22,0.1);">📖</div>
+              <div class="hero__float-title">English</div>
+              <div class="hero__float-subtitle">Reading & Writing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== Stats Bar ======== -->
+  <section class="section" style="padding:var(--space-12) 0;background:var(--surface-secondary);">
+    <div class="container">
+      <div class="stats-bar reveal">
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="500">0+</div>
+          <div class="stat-item__label">Happy Students</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="15">0+</div>
+          <div class="stat-item__label">Expert Tutors</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="95">0%</div>
+          <div class="stat-item__label">Satisfaction Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-item__value" data-count="10">0+</div>
+          <div class="stat-item__label">Years of Excellence</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== About / Why Choose Us ======== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">✨ Why Choose Us</span>
+        <h2 class="section__title">Nurturing <span class="text-gradient">Every Child's</span> Potential</h2>
+        <p class="section__subtitle">At Kalash Tutorials, we believe every child has the ability to excel. Our proven approach combines expert teaching with personalized attention.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal reveal--delay-1">
+          <div class="feature-card__icon feature-card__icon--blue">👥</div>
+          <h3 class="feature-card__title">Small Class Sizes</h3>
+          <p class="feature-card__text">Maximum 8 students per class ensures every child gets the individual attention they deserve for optimal learning.</p>
+        </div>
+        <div class="feature-card reveal reveal--delay-2">
+          <div class="feature-card__icon feature-card__icon--purple">🎓</div>
+          <h3 class="feature-card__title">Experienced Tutors</h3>
+          <p class="feature-card__text">Our tutors are qualified professionals with years of experience in primary education and a passion for teaching.</p>
+        </div>
+        <div class="feature-card reveal reveal--delay-3">
+          <div class="feature-card__icon feature-card__icon--coral">📊</div>
+          <h3 class="feature-card__title">Progress Tracking</h3>
+          <p class="feature-card__text">Regular assessments and detailed progress reports keep parents informed about their child's academic growth.</p>
+        </div>
+        <div class="feature-card reveal reveal--delay-4">
+          <div class="feature-card__icon feature-card__icon--emerald">🧪</div>
+          <h3 class="feature-card__title">Hands-On Learning</h3>
+          <p class="feature-card__text">Interactive activities, experiments, and creative projects make learning engaging and fun for young minds.</p>
+        </div>
+        <div class="feature-card reveal reveal--delay-1">
+          <div class="feature-card__icon feature-card__icon--rose">📝</div>
+          <h3 class="feature-card__title">Exam Preparation</h3>
+          <p class="feature-card__text">Structured revision plans and practice papers prepare students to perform their best in school examinations.</p>
+        </div>
+        <div class="feature-card reveal reveal--delay-2">
+          <div class="feature-card__icon feature-card__icon--blue">💬</div>
+          <h3 class="feature-card__title">Parent Communication</h3>
+          <p class="feature-card__text">Open communication channels with regular parent-teacher meetings to discuss progress and areas of improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ======== Testimonials ======== -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">💬 Testimonials</span>
+        <h2 class="section__title">What <span class="text-gradient">Parents Say</span></h2>
+        <p class="section__subtitle">Don't just take our word for it — hear from the families who've seen their children thrive with Kalash Tutorials.</p>
+      </div>
+      <div class="testimonials-slider reveal" id="testimonialSlider">
+        <div class="testimonials-track" id="testimonialTrack">
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">My son's math grades improved dramatically within just 3 months. The tutors at Kalash Tutorials are incredibly patient and know exactly how to make concepts click.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">AP</div>
+              <div>
+                <div class="testimonial-card__name">Anita Patel</div>
+                <div class="testimonial-card__role">Parent of Grade 4 Student</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">The science experiments are what my daughter looks forward to every week! She's gone from disliking science to being absolutely fascinated by it. Thank you, Kalash!</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">RS</div>
+              <div>
+                <div class="testimonial-card__name">Rajesh Sharma</div>
+                <div class="testimonial-card__role">Parent of Grade 3 Student</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">Small class sizes make such a difference. My child gets personalized attention that she never received in school. The progress reports are detailed and very helpful.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">MK</div>
+              <div>
+                <div class="testimonial-card__name">Meena Kumar</div>
+                <div class="testimonial-card__role">Parent of Grade 5 Student</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">English was always challenging for my son, but with the creative writing exercises and reading sessions here, he's now writing stories on his own! Truly impressive tutoring.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">DG</div>
+              <div>
+                <div class="testimonial-card__name">Deepak Gupta</div>
+                <div class="testimonial-card__role">Parent of Grade 2 Student</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">We've tried multiple tuition centers before finding Kalash. The difference is night and day. The structured curriculum and caring tutors have transformed our child's confidence.</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">SJ</div>
+              <div>
+                <div class="testimonial-card__name">Sunita Joshi</div>
+                <div class="testimonial-card__role">Parent of Grade 6 Student</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-card__quote">"</div>
+            <div class="testimonial-card__stars">★★★★★</div>
+            <p class="testimonial-card__text">The regular parent-teacher meetings keep us in the loop about our child's progress. It's clear the tutors genuinely care about every student's success. Highly recommend!</p>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">VN</div>
+              <div>
+                <div class="testimonial-card__name">Vikram Nair</div>
+                <div class="testimonial-card__role">Parent of Grade 1 Student</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonials-nav">
+        <button class="testimonials-nav__btn" id="prevTestimonial" aria-label="Previous testimonials">←</button>
+        <button class="testimonials-nav__btn" id="nextTestimonial" aria-label="Next testimonials">→</button>
+      </div>
+      <div class="testimonials-dots" id="testimonialDots"></div>
+    </div>
+  </section>
+
+
+  <!-- ======== FAQ ======== -->
+  <section class="section section--alt" id="faq">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">❓ FAQ</span>
+        <h2 class="section__title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+        <p class="section__subtitle">Find answers to common questions about our programs, schedule, and enrollment process.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item reveal reveal--delay-1">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">What age group and grades do you cater to?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">We offer tuition for primary school students from Grade 1 through Grade 6 (ages 6-12). Our curriculum is tailored to each grade level, ensuring age-appropriate teaching methods and content.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal--delay-2">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">How large are your class sizes?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">We maintain a strict maximum of 8 students per class. This small group size ensures that every child receives personalized attention and can actively participate in lessons.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal--delay-3">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">What subjects do you teach?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">We specialize in three core subjects: Mathematics, Science, and English. Each subject has a structured curriculum with regular assessments to track progress. Students can enroll in one, two, or all three subjects.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal--delay-4">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">What is the class schedule?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">We offer flexible scheduling with both weekday and weekend options. Weekday classes run from 9-11 AM or 2-4 PM, and weekend classes run from 9-11 AM or 2-4 PM. You can choose the slot that best fits your child's routine.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal--delay-1">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">How do you track and communicate student progress?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">We conduct regular assessments and provide detailed progress reports to parents. Additionally, we hold periodic parent-teacher meetings and maintain an online student portal where parents can track attendance, assignments, and grades.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal--delay-2">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">How do I enroll my child?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">You can enroll through our online enrollment form on this website, or visit our center in person. The process takes just a few minutes — you'll need your child's basic details and your contact information. Feel free to call us if you need any help!</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal reveal--delay-3">
+          <div class="faq-item__header" role="button" tabindex="0" aria-expanded="false">
+            <span class="faq-item__question">Do you offer a trial class?</span>
+            <span class="faq-item__icon">▼</span>
+          </div>
+          <div class="faq-item__body">
+            <p class="faq-item__answer">Yes! We offer a complimentary trial class so your child can experience our teaching style and environment before committing. Contact us to schedule a free trial session in any subject.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== Contact ======== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <span class="section__label">📞 Get in Touch</span>
+        <h2 class="section__title">Contact <span class="text-gradient">Kalash Tutorials</span></h2>
+        <p class="section__subtitle">Have questions? We'd love to hear from you. Reach out and we'll get back to you within 24 hours.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📍</div>
+            <div>
+              <div class="contact-info__label">Visit Us</div>
+              <div class="contact-info__value">123 Education Lane, Knowledge City</div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">📞</div>
+            <div>
+              <div class="contact-info__label">Call Us</div>
+              <div class="contact-info__value">+91 98765 43210</div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">✉️</div>
+            <div>
+              <div class="contact-info__label">Email Us</div>
+              <div class="contact-info__value">hello@kalashtutorials.com</div>
+            </div>
+          </div>
+          <div class="contact-info__item">
+            <div class="contact-info__icon">🕐</div>
+            <div>
+              <div class="contact-info__label">Working Hours</div>
+              <div class="contact-info__value">Mon-Sat: 8:00 AM – 6:00 PM</div>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div style="margin-top:var(--space-6);background:var(--surface-secondary);border:1px solid var(--clr-primary-100);border-radius:var(--radius-xl);height:200px;display:flex;align-items:center;justify-content:center;color:var(--text-tertiary);font-size:var(--fs-body-sm);">
+            🗺️ Google Maps Embed — Add your location
+          </div>
+        </div>
+
+        <div class="contact-form reveal reveal--delay-2">
+          <h3 style="margin-bottom:var(--space-6);">Send us a Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contactName">Your Name</label>
+                <input class="form-input" type="text" id="contactName" placeholder="John Doe" required>
+                <span class="form-error">Please enter your name</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Email Address</label>
+                <input class="form-input" type="email" id="contactEmail" placeholder="john@example.com" required>
+                <span class="form-error">Please enter a valid email</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactSubject">Subject</label>
+              <input class="form-input" type="text" id="contactSubject" placeholder="Inquiry about enrollment" required>
+              <span class="form-error">Please enter a subject</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message</label>
+              <textarea class="form-textarea" id="contactMessage" placeholder="Tell us how we can help..." required></textarea>
+              <span class="form-error">Please enter your message</span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg" style="width:100%;">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== CTA Banner ======== -->
+  <section class="section" style="background:var(--gradient-hero);padding:var(--space-16) 0;">
+    <div class="container" style="text-align:center;">
+      <div class="reveal">
+        <h2 style="font-size:var(--fs-h1);color:white;margin-bottom:var(--space-4);">Ready to See Your Child <span style="background:linear-gradient(135deg,#60a5fa,#a78bfa,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Thrive?</span></h2>
+        <p style="font-size:var(--fs-body-lg);color:var(--clr-primary-400);max-width:600px;margin:0 auto var(--space-8);line-height:var(--lh-relaxed);">
+          Join hundreds of families who've chosen Kalash Tutorials. Book a free trial class today and experience the difference.
+        </p>
+        <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+          <a href="enroll.html" class="btn btn--primary btn--lg">✨ Start Enrollment</a>
+          <a href="#contact" class="btn btn--outline btn--lg" style="border-color:rgba(255,255,255,0.2);color:white;">📞 Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-icon">KT</div>
+            <span class="brand-name">Kalash <span class="brand-name__accent">Tutorials</span></span>
+          </div>
+          <p class="footer__description">Empowering young minds with quality education in Mathematics, Science, and English. Building strong foundations for a bright future.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">f</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">𝕏</a>
+            <a href="#" class="footer__social-link" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <a href="#home" class="footer__link">Home</a>
+          <a href="#about" class="footer__link">About Us</a>
+          <a href="#testimonials" class="footer__link">Testimonials</a>
+          <a href="#faq" class="footer__link">FAQ</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Programs</h4>
+          <a href="enroll.html" class="footer__link">Mathematics</a>
+          <a href="enroll.html" class="footer__link">Science</a>
+          <a href="enroll.html" class="footer__link">English</a>
+          <a href="enroll.html" class="footer__link">Enrollment</a>
+          <a href="portal.html" class="footer__link">Student Portal</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <a href="tel:+919876543210" class="footer__link">+91 98765 43210</a>
+          <a href="mailto:hello@kalashtutorials.com" class="footer__link">hello@kalashtutorials.com</a>
+          <span class="footer__link">123 Education Lane</span>
+          <span class="footer__link">Knowledge City</span>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Kalash Tutorials. All rights reserved.</span>
+        <span>Crafted with ❤️ for education</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Contact Success Modal -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal">
+      <div class="modal__icon">✅</div>
+      <h3 class="modal__title">Message Sent!</h3>
+      <p class="modal__text">Thank you for reaching out to Kalash Tutorials. We'll get back to you within 24 hours.</p>
+      <button class="btn btn--primary btn--lg" id="closeContactModal" style="width:100%;">Got it!</button>
+    </div>
+  </div>
+
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
