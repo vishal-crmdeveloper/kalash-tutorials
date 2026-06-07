@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enroll your child at Kalash Tutorials — primary school tuition for Math, Science, and English.">
+  <title>Enroll | Kalash Tutorials</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <div class="nav__logo-icon">KT</div>
+        Kalash Tutorials
+      </a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="enroll.html" class="nav__link nav__link--active">Enroll</a>
+        <a href="portal.html" class="nav__link">Portal</a>
+      </div>
+      <div class="nav__actions">
+        <a href="enroll.html" class="btn btn--primary">Enroll Now</a>
+        <button class="nav__hamburger" id="navHamburger" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== Enroll Hero ===== -->
+  <section class="enroll-hero">
+    <div class="enroll-hero__content container">
+      <h1 class="enroll-hero__title">Enroll Your Child</h1>
+      <p class="enroll-hero__subtitle">Complete the form below to register your child for our expert-led tuition programmes. It only takes a few minutes!</p>
+    </div>
+  </section>
+
+  <!-- ===== Wizard Form ===== -->
+  <section class="section">
+    <div class="container container--narrow">
+      <form class="wizard" id="enrollForm" novalidate>
+
+        <!-- Progress Indicator -->
+        <div class="wizard__progress">
+          <div class="wizard__step wizard__step--active" data-step="1">
+            <div class="wizard__step-number">1</div>
+            <span class="wizard__step-label">Student Info</span>
+          </div>
+          <div class="wizard__connector" data-connector="1"></div>
+          <div class="wizard__step" data-step="2">
+            <div class="wizard__step-number">2</div>
+            <span class="wizard__step-label">Subject & Schedule</span>
+          </div>
+          <div class="wizard__connector" data-connector="2"></div>
+          <div class="wizard__step" data-step="3">
+            <div class="wizard__step-number">3</div>
+            <span class="wizard__step-label">Parent Details</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Student Information -->
+        <div class="wizard__panel wizard__panel--active" data-panel="1">
+          <h2 class="wizard__panel-title">Student Information</h2>
+          <p class="wizard__panel-subtitle">Tell us about the student you'd like to enroll.</p>
+
+          <div class="form-row">
+            <div class="form-group" id="group-studentName">
+              <label class="form-label" for="studentName">Student Full Name</label>
+              <input type="text" id="studentName" name="studentName" class="form-input" placeholder="e.g. Aarav Sharma" required>
+              <span class="form-error">Please enter the student's full name.</span>
+            </div>
+            <div class="form-group" id="group-dob">
+              <label class="form-label" for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" class="form-input" required>
+              <span class="form-error">Please select the date of birth.</span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="group-grade">
+              <label class="form-label" for="grade">Current Grade / Class</label>
+              <select id="grade" name="grade" class="form-select" required>
+                <option value="">Select grade…</option>
+                <option value="1">Grade 1</option>
+                <option value="2">Grade 2</option>
+                <option value="3">Grade 3</option>
+                <option value="4">Grade 4</option>
+                <option value="5">Grade 5</option>
+                <option value="6">Grade 6</option>
+              </select>
+              <span class="form-error">Please select a grade.</span>
+            </div>
+            <div class="form-group" id="group-school">
+              <label class="form-label" for="school">School Name</label>
+              <input type="text" id="school" name="school" class="form-input" placeholder="e.g. Sunrise Public School" required>
+              <span class="form-error">Please enter the school name.</span>
+            </div>
+          </div>
+
+          <div class="wizard__actions">
+            <div></div>
+            <button type="button" class="btn btn--primary btn--lg" data-action="next">Next Step →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Subject & Schedule -->
+        <div class="wizard__panel" data-panel="2">
+          <h2 class="wizard__panel-title">Subject &amp; Schedule</h2>
+          <p class="wizard__panel-subtitle">Choose the subjects and your preferred batch timing.</p>
+
+          <!-- Subject Cards -->
+          <div class="form-group" id="group-subjects">
+            <label class="form-label">Select Subjects</label>
+            <div class="subject-cards">
+              <label class="subject-card">
+                <input type="checkbox" name="subjects" value="math">
+                <div class="subject-card__inner">
+                  <div class="subject-card__icon">📐</div>
+                  <div class="subject-card__name">Math</div>
+                </div>
+              </label>
+              <label class="subject-card">
+                <input type="checkbox" name="subjects" value="science">
+                <div class="subject-card__inner">
+                  <div class="subject-card__icon">🔬</div>
+                  <div class="subject-card__name">Science</div>
+                </div>
+              </label>
+              <label class="subject-card">
+                <input type="checkbox" name="subjects" value="english">
+                <div class="subject-card__inner">
+                  <div class="subject-card__icon">📚</div>
+                  <div class="subject-card__name">English</div>
+                </div>
+              </label>
+            </div>
+            <span class="form-error">Please select at least one subject.</span>
+          </div>
+
+          <!-- Schedule Options -->
+          <div class="form-group" id="group-schedule">
+            <label class="form-label">Preferred Schedule</label>
+            <div class="schedule-options">
+              <label class="schedule-option">
+                <input type="radio" name="schedule" value="weekday-morning">
+                <div class="schedule-option__inner">
+                  <div class="schedule-option__radio"></div>
+                  <div>
+                    <div class="schedule-option__text">Weekday Morning</div>
+                    <div class="schedule-option__time">9:00 AM – 11:00 AM</div>
+                  </div>
+                </div>
+              </label>
+              <label class="schedule-option">
+                <input type="radio" name="schedule" value="weekday-afternoon">
+                <div class="schedule-option__inner">
+                  <div class="schedule-option__radio"></div>
+                  <div>
+                    <div class="schedule-option__text">Weekday Afternoon</div>
+                    <div class="schedule-option__time">2:00 PM – 4:00 PM</div>
+                  </div>
+                </div>
+              </label>
+              <label class="schedule-option">
+                <input type="radio" name="schedule" value="weekend-morning">
+                <div class="schedule-option__inner">
+                  <div class="schedule-option__radio"></div>
+                  <div>
+                    <div class="schedule-option__text">Weekend Morning</div>
+                    <div class="schedule-option__time">9:00 AM – 11:00 AM</div>
+                  </div>
+                </div>
+              </label>
+              <label class="schedule-option">
+                <input type="radio" name="schedule" value="weekend-afternoon">
+                <div class="schedule-option__inner">
+                  <div class="schedule-option__radio"></div>
+                  <div>
+                    <div class="schedule-option__text">Weekend Afternoon</div>
+                    <div class="schedule-option__time">2:00 PM – 4:00 PM</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+            <span class="form-error">Please select a preferred schedule.</span>
+          </div>
+
+          <div class="wizard__actions">
+            <button type="button" class="btn btn--outline btn--lg" data-action="prev">← Back</button>
+            <button type="button" class="btn btn--primary btn--lg" data-action="next">Next Step →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Parent / Guardian Details -->
+        <div class="wizard__panel" data-panel="3">
+          <h2 class="wizard__panel-title">Parent / Guardian Details</h2>
+          <p class="wizard__panel-subtitle">We'll use these details to keep you updated on your child's progress.</p>
+
+          <div class="form-group" id="group-parentName">
+            <label class="form-label" for="parentName">Parent / Guardian Full Name</label>
+            <input type="text" id="parentName" name="parentName" class="form-input" placeholder="e.g. Priya Sharma" required>
+            <span class="form-error">Please enter the parent's full name.</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="group-email">
+              <label class="form-label" for="email">Email Address</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="e.g. priya@email.com" required>
+              <span class="form-error">Please enter a valid email address.</span>
+            </div>
+            <div class="form-group" id="group-phone">
+              <label class="form-label" for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. +91 98765 43210" required>
+              <span class="form-error">Please enter a valid phone number.</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="notes">Additional Notes / Requests</label>
+            <textarea id="notes" name="notes" class="form-textarea" placeholder="Any special requirements, learning needs, or questions you have…"></textarea>
+          </div>
+
+          <div class="wizard__actions">
+            <button type="button" class="btn btn--outline btn--lg" data-action="prev">← Back</button>
+            <button type="submit" class="btn btn--primary btn--lg">Submit Enrollment ✓</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Success Modal ===== -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal">
+      <div class="modal__icon">✅</div>
+      <h3 class="modal__title">Enrollment Submitted!</h3>
+      <p class="modal__text">Thank you for enrolling your child with Kalash Tutorials. We'll review the application and get in touch within 24 hours to confirm the schedule and next steps.</p>
+      <button type="button" class="btn btn--primary btn--lg" id="modalClose">Got it, thanks!</button>
+    </div>
+  </div>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-icon">KT</div>
+            Kalash Tutorials
+          </div>
+          <p class="footer__description">Empowering young minds through quality tuition in Math, Science, and English. Building strong foundations for a brighter future.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="footer__social-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <a href="index.html" class="footer__link">Home</a>
+          <a href="enroll.html" class="footer__link">Enroll</a>
+          <a href="portal.html" class="footer__link">Student Portal</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Subjects</h4>
+          <a href="#" class="footer__link">Mathematics</a>
+          <a href="#" class="footer__link">Science</a>
+          <a href="#" class="footer__link">English</a>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Contact</h4>
+          <span class="footer__link">📍 123 Education Lane</span>
+          <span class="footer__link">📞 +91 98765 43210</span>
+          <span class="footer__link">✉️ hello@kalashtutorials.com</span>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Kalash Tutorials. All rights reserved.</span>
+        <span>Made with ❤️ for young learners</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/enroll.js"></script>
+</body>
+</html>
